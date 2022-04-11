@@ -1,4 +1,4 @@
-# Proyecto - INF 2241 Programacionorientada a objetos
+# Proyecto - INF 2241 Programacion orientada a objetos
 
 ****Escuela de Ingeniería Informática | PUCV Chile****
 
