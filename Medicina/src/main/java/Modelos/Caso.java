@@ -8,4 +8,5 @@ public class Caso {
     private Paciente paciente;
     private Date fechaIngreso;
     private ArrayList<Comentario> Comentario;
+
 }

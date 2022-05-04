@@ -1,5 +1,7 @@
 package Modelos;
 
+import java.util.Scanner;
+
 public class Paciente extends Persona {
 
     private String email,prevision;
@@ -8,6 +10,11 @@ public class Paciente extends Persona {
         super(rut, nombre, apPaterno, apMaterno, edad);
         this.email = email;
         this.prevision = prevision;
+    }
+
+    public Paciente(){
+        super();
+
     }
 
     //Getters
@@ -30,6 +37,8 @@ public class Paciente extends Persona {
     public void setPrevision(String prevision) {
         this.prevision = prevision;
     }
+
+    //Metodo
 
 
 }

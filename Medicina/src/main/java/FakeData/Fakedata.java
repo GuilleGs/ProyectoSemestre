@@ -1,21 +1,25 @@
 package FakeData;
 
-import Data.PacienteDataFile;
+import Data.PacienteDF;
+import Data.ProfesionalSaludDF;
 import Modelos.Paciente;
+import Modelos.ProfesionalSalud;
 import com.github.javafaker.Faker;
 
 public class Fakedata {
 
-    private final PacienteDataFile pacienteDataFile;
+    private final PacienteDF pacienteDataFile;
+    private final ProfesionalSaludDF profesionalSaludDF;
     private final Faker faker;
 
     public Fakedata() {
-        this.pacienteDataFile=new PacienteDataFile();
+        this.pacienteDataFile=new PacienteDF();
+        this.profesionalSaludDF=new ProfesionalSaludDF();
         this.faker = new Faker();
     }
 
     public Paciente generatePaciente(){
-        String rut,nombre,apPat,apMat,email,preivision;
+        String rut,nombre,apPat,apMat,email,prevision;
         int edad;
         rut = Integer.toString(this.faker.number().numberBetween(25000000, 35000000))
                 + "-" + Integer.toString(this.faker.number().numberBetween(0, 9));
@@ -23,15 +27,34 @@ public class Fakedata {
         apPat = this.faker.name().lastName();
         apMat = this.faker.name().lastName();
         email = this.faker.internet().emailAddress();
-        preivision = this.faker.name().firstName();
+        prevision = this.faker.name().firstName();
         edad = this.faker.number().numberBetween(1,80);
-        return new Paciente(rut,nombre,apPat,apMat,edad,email,preivision);
+        return new Paciente(rut,nombre,apPat,apMat,edad,email,prevision);
     }
+
+    public ProfesionalSalud generateProfesional(){
+        String rut,nombre,apPat,apMat,profesion,universidad;
+        int edad,anioEgreso;
+        rut = Integer.toString(this.faker.number().numberBetween(25000000, 35000000))
+                + "-" + Integer.toString(this.faker.number().numberBetween(0, 9));
+        nombre = this.faker.name().firstName();
+        apPat = this.faker.name().lastName();
+        apMat = this.faker.name().lastName();
+        edad = this.faker.number().numberBetween(1,80);
+        profesion = this.faker.name().username();
+        universidad = this.faker.name().username();
+        anioEgreso = this.faker.number().numberBetween(1900,2019);
+        return new ProfesionalSalud(rut,nombre,apPat,apMat,edad,profesion,universidad,anioEgreso);
+    }
+
     public void generateFakeData(){
         Paciente paciente;
+        ProfesionalSalud profesionalSalud;
         for (short i=1; i<10;i++){
             paciente = generatePaciente();
+            profesionalSalud = generateProfesional();
             pacienteDataFile.insertarPaciente(paciente);
+            profesionalSaludDF.insertarProfesional(profesionalSalud);
         }
     }
 

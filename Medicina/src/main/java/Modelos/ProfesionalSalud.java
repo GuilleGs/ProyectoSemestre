@@ -9,12 +9,11 @@ public class ProfesionalSalud extends Persona {
     private int anioEgreso;
     private ArrayList<CentroSalud> centrosAtencion;
 
-    public ProfesionalSalud(String rut, String nombre, String apPaterno, String apMaterno, int edad, String profesion, String universidad, int anioEgreso, ArrayList<CentroSalud> centrosAtencion) {
+    public ProfesionalSalud(String rut, String nombre, String apPaterno, String apMaterno, int edad, String profesion, String universidad, int anioEgreso) {
         super(rut, nombre, apPaterno, apMaterno, edad);
         this.profesion = profesion;
         this.universidad = universidad;
         this.anioEgreso = anioEgreso;
-        this.centrosAtencion = centrosAtencion;
     }
 
     //Getters

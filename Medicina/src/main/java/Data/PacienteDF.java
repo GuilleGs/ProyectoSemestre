@@ -5,10 +5,10 @@ import Modelos.Paciente;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PacienteDataFile implements PacienteData {
+public class PacienteDF implements PacienteData {
     private final DataFile dataFile;
 
-    public PacienteDataFile() {
+    public PacienteDF() {
         this.dataFile = new DataFile("Paciente");
     }
 

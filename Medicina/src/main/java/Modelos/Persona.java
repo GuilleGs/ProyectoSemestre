@@ -13,6 +13,10 @@ public class Persona {
         this.edad = edad;
     }
 
+    public Persona() {
+
+    }
+
     //Getters
     public String getRut() {
         return rut;
