@@ -36,4 +36,30 @@ public class CentroSalud {
     public int getTelefono() {
         return telefono;
     }
+
+    //Setters
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setComuna(String comuna) {
+        this.comuna = comuna;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public void setProfesionalSalud(HashMap<String, ProfesionalSalud> profesionalSalud) {
+        this.profesionalSalud = profesionalSalud;
+    }
 }

@@ -1,5 +1,6 @@
-package Data;
+package Data.datafile;
 
+import Data.PacienteData;
 import Modelos.Paciente;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class PacienteDF implements PacienteData {
     }
 
     //Objeto paciente, en una linea CSV
-    public String pacienteaCSV(Paciente paciente){
+    public String pacientetoCSV(Paciente paciente){
         List<String> datalist=new ArrayList<>();
         datalist.add((paciente.getRut()));
         datalist.add(paciente.getNombre());
@@ -26,7 +27,7 @@ public class PacienteDF implements PacienteData {
     }
 
     //obtener un paciente desde un csv
-    public Paciente pacientedeCSV(String csv){
+    public Paciente pacientefromCSV(String csv){
         String[] parts = csv.split(",");
         return new Paciente(parts[0],parts[1],parts[2],parts[3],Integer.parseInt((parts[4])),parts[5],parts[6]);
     }
@@ -35,25 +36,25 @@ public class PacienteDF implements PacienteData {
     public Paciente getPaciente(String rut){
         List<String> data = this.dataFile.getData();
         for (String csv : data){
-            if (csv.split(",")[0].equals(rut));
-                return pacientedeCSV(csv);
+            if (csv.split(",")[0].equals(rut))
+                return pacientefromCSV(csv);
         }
         return null;
     }
 
     //Agrega un paciente al archivo
     public boolean insertarPaciente(Paciente paciente){
-        return this.dataFile.insertLine(pacienteaCSV(paciente));
+        return this.dataFile.insertLine(pacientetoCSV(paciente));
     }
 
     //Actualiza los datos de un paciente
     public boolean updatePaciente(Paciente paciente){
-        String oldLine = pacienteaCSV(null), newLine = pacienteaCSV(paciente);
+        String oldLine = pacientetoCSV(null), newLine = pacientetoCSV(paciente);
         return this.dataFile.updateLine(oldLine,newLine);
     }
 
     //Elimina un paciente
     public boolean deletePaciente(Paciente paciente){
-        return this.dataFile.deleteLine(pacienteaCSV(paciente));
+        return this.dataFile.deleteLine(pacientetoCSV(paciente));
     }
 }

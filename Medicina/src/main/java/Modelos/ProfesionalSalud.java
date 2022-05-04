@@ -16,6 +16,10 @@ public class ProfesionalSalud extends Persona {
         this.anioEgreso = anioEgreso;
     }
 
+    public ProfesionalSalud() {
+
+    }
+
     //Getters
 
 

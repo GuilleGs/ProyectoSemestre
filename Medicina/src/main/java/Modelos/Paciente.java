@@ -1,6 +1,5 @@
 package Modelos;
 
-import java.util.Scanner;
 
 public class Paciente extends Persona {
 

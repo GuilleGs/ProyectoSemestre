@@ -1,5 +1,6 @@
-package Data;
+package Data.datafile;
 
+import Data.ProfesionalData;
 import Modelos.Paciente;
 import Modelos.ProfesionalSalud;
 import java.util.List;
@@ -32,7 +33,7 @@ public class ProfesionalSaludDF implements ProfesionalData{
     public ProfesionalSalud getProfesional(String rut){
         List<String> data = this.dataFile.getData();
         for (String csv : data){
-            if (csv.split(",")[0].equals(rut));
+            if (csv.split(",")[0].equals(rut))
                 return profesinaldeCSV(csv);
         }
         return null;

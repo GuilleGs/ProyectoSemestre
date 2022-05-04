@@ -1,7 +1,7 @@
 package FakeData;
 
-import Data.PacienteDF;
-import Data.ProfesionalSaludDF;
+import Data.datafile.PacienteDF;
+import Data.datafile.ProfesionalSaludDF;
 import Modelos.Paciente;
 import Modelos.ProfesionalSalud;
 import com.github.javafaker.Faker;
