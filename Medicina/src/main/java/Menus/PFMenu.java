@@ -1,15 +1,24 @@
 package Menus;
 
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
+
 import Data.datafile.ProfesionalSaludDF;
-import Modelos.Paciente;
 import Modelos.ProfesionalSalud;
 
 import java.util.Scanner;
-
+/*
+ *
+ * Menu correspondiente a la clases @ProfesionalSalud
+ *
+ */
 public class PFMenu {
     public ProfesionalSalud profesionalSalud=new ProfesionalSalud();
     public ProfesionalSaludDF profesionalSaludDF=new ProfesionalSaludDF();
 
+    //Metodo que agrega un objeto profesionalSalud
     public ProfesionalSalud profesionalcreado(){
         Scanner Entrada=new Scanner(System.in);
         String rut,nombre,apPaterno,apMaterno,profesion,universidad;
@@ -32,14 +41,20 @@ public class PFMenu {
         anioEgreso=Integer.parseInt(Entrada.nextLine());
         return new ProfesionalSalud(rut,nombre,apPaterno,apMaterno,edad,profesion,universidad,anioEgreso);
     }
+
+    //Metodo que agrega un objeto profesionalSalud
     public void generarProfesional(){
         profesionalSalud = profesionalcreado();
         profesionalSaludDF.insertarProfesional(profesionalSalud);
     }
+
+    //Metodo que busca un profesionalSalud por su rut
     public ProfesionalSalud buscarProfesional(String rut){
         profesionalSalud = profesionalSaludDF.getProfesional(rut);
         return profesionalSalud;
     }
+
+    //Metodo que imprime por consola un profesionalSalud
     public void imprimirProfesional(){
         String rut;
         Scanner Entrada=new Scanner(System.in);
@@ -54,6 +69,8 @@ public class PFMenu {
             System.out.println("No existe esta persona");
         }
     }
+
+    //Metodo que elmina un objeto profesionalSalud
     public ProfesionalSalud eliminarProfesional(){
         String rut;
         Scanner Entrada=new Scanner(System.in);
@@ -63,6 +80,8 @@ public class PFMenu {
         profesionalSaludDF.deleteProfesional(profesionalSalud);
         return profesionalSalud;
     }
+
+    //Metodo que modifica un objeto profesionalSalud
     public boolean modificarProfesional(){
         String rut;
         Scanner Entrada=new Scanner(System.in);

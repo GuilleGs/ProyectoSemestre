@@ -3,19 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Menus;
-
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 import Data.datafile.PacienteDF;
 import Modelos.Paciente;
 import java.util.Scanner;
 
-/**
+/*
  *
- * @author ggonzalez
+ * Menu correspondiente a la clases @Paciente
+ *
  */
-public class PacienteMenu {
+public class PMenu {
     public  Paciente paciente = new Paciente();
     public  PacienteDF pacienteDF = new PacienteDF();
 
+    //Metodo que crea un objeto paciente
     public Paciente pacientecreado(){
         Scanner Entrada=new Scanner(System.in);
         String rut,nombre,apPaterno,apMaterno,email,prevision;
@@ -36,15 +41,21 @@ public class PacienteMenu {
         prevision=Entrada.nextLine();
         return new Paciente(rut,nombre,apPaterno,apMaterno,edad,email,prevision);
     }
+
+    //Metodo que agrega un objeto paciente
     public void generarPaciente(){
         Paciente paciente;
         paciente = pacientecreado();
         pacienteDF.insertarPaciente(paciente);
     }
+
+    //Metodo que busca un paciente por su rut
     public Paciente buscarpaciente(String rut){
         paciente = pacienteDF.getPaciente(rut);
         return paciente;
     }
+
+    //Metodo que imprime por consola un paciente
     public void imprimirPaciente(){
         String rut;
         Scanner Entrada=new Scanner(System.in);
@@ -59,6 +70,8 @@ public class PacienteMenu {
             System.out.println("No existe esta persona");
         }
     }
+
+    //Metodo que elmina un objeto paciente
     public Paciente eliminarPaciente(){
         String rut;
         Scanner Entrada=new Scanner(System.in);
@@ -68,6 +81,8 @@ public class PacienteMenu {
         pacienteDF.deletePaciente(paciente);
         return paciente;
     }
+
+    //Metodo que modifica un objeto paciente
     public boolean modificarPaciente(){
         String rut;
         Scanner Entrada=new Scanner(System.in);
@@ -80,4 +95,5 @@ public class PacienteMenu {
             pacienteDF.updatePaciente(paciente);
             return true;
     }
+
 }

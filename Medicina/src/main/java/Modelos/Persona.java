@@ -1,5 +1,8 @@
 package Modelos;
-
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 public class Persona {
 
     private String rut,nombre,apPaterno,apMaterno;

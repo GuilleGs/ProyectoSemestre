@@ -1,11 +1,13 @@
 package Modelos;
 
-import java.util.HashMap;
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 
 public class CentroSalud {
     private String nombre,direccion,comuna,region;
     private int telefono;
-    private HashMap<String, ProfesionalSalud> profesionalSalud;
 
     public CentroSalud(String nombre, String direccion, String comuna, String region, int telefono) {
         this.nombre = nombre;
@@ -13,6 +15,10 @@ public class CentroSalud {
         this.comuna = comuna;
         this.region = region;
         this.telefono = telefono;
+    }
+
+    public CentroSalud() {
+
     }
 
     //Getters
@@ -37,6 +43,7 @@ public class CentroSalud {
         return telefono;
     }
 
+
     //Setters
 
     public void setNombre(String nombre) {
@@ -59,7 +66,5 @@ public class CentroSalud {
         this.telefono = telefono;
     }
 
-    public void setProfesionalSalud(HashMap<String, ProfesionalSalud> profesionalSalud) {
-        this.profesionalSalud = profesionalSalud;
-    }
+
 }

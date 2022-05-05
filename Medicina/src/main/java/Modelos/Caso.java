@@ -1,12 +1,34 @@
 package Modelos;
 
-import java.util.ArrayList;
-import java.util.Date;
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 
 public class Caso {
+    private IDCaso id;
     private String descripcion;
-    private Paciente paciente;
-    private Date fechaIngreso;
-    private ArrayList<Comentario> Comentario;
+
+
+    public Caso(IDCaso id, String descripcion) {
+        this.id = id;
+        this.descripcion = descripcion;
+    }
+
+    public IDCaso getId() {
+        return id;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setId(IDCaso id) {
+        this.id = id;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
 }

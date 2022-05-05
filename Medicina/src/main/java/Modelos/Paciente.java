@@ -1,9 +1,16 @@
 package Modelos;
 
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
+
+import java.util.HashMap;
 
 public class Paciente extends Persona {
 
     private String email,prevision;
+    private HashMap<IDCaso,Caso> casos;
 
     public Paciente(String rut, String nombre, String apPaterno, String apMaterno, int edad, String email, String prevision) {
         super(rut, nombre, apPaterno, apMaterno, edad);

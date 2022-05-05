@@ -1,7 +1,10 @@
 package Modelos;
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 
 import java.util.ArrayList;
-
 
 public class ProfesionalSalud extends Persona {
 

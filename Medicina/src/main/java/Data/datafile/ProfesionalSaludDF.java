@@ -1,5 +1,8 @@
 package Data.datafile;
-
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 import Data.ProfesionalData;
 import Modelos.Paciente;
 import Modelos.ProfesionalSalud;

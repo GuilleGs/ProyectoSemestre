@@ -1,5 +1,8 @@
 package Data.datafile;
-
+/**
+ *
+ * @author Guillermo González y Brayan Ocares
+ */
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
