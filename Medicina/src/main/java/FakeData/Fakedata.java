@@ -3,8 +3,10 @@ package FakeData;
  *
  * @author Guillermo González y Brayan Ocares
  */
+import Data.datafile.CentroSaludDF;
 import Data.datafile.PacienteDF;
 import Data.datafile.ProfesionalSaludDF;
+import Modelos.CentroSalud;
 import Modelos.Paciente;
 import Modelos.ProfesionalSalud;
 import com.github.javafaker.Faker;
@@ -13,11 +15,13 @@ public class Fakedata {
 
     private final PacienteDF pacienteDataFile;
     private final ProfesionalSaludDF profesionalSaludDF;
+    private final CentroSaludDF centroSaludDF;
     private final Faker faker;
 
     public Fakedata() {
         this.pacienteDataFile=new PacienteDF();
         this.profesionalSaludDF=new ProfesionalSaludDF();
+        this.centroSaludDF=new CentroSaludDF();
         this.faker = new Faker();
     }
 
@@ -49,15 +53,28 @@ public class Fakedata {
         anioEgreso = this.faker.number().numberBetween(1900,2019);
         return new ProfesionalSalud(rut,nombre,apPat,apMat,edad,profesion,universidad,anioEgreso);
     }
+    public CentroSalud generateCentro(){
+        String nombre,direccion,comuna,region;
+        int telefono;
+        nombre = this.faker.name().firstName();
+        direccion = this.faker.name().lastName();
+        comuna = this.faker.name().lastName();
+        telefono= this.faker.number().numberBetween(10000000,89999999);
+        region = this.faker.name().username();
+        return new CentroSalud(nombre,direccion,comuna,region,telefono);
+    }
 
     public void generateFakeData(){
         Paciente paciente;
         ProfesionalSalud profesionalSalud;
+        CentroSalud centroSalud;
         for (short i=1; i<10;i++){
             paciente = generatePaciente();
             profesionalSalud = generateProfesional();
+            centroSalud = generateCentro();
             pacienteDataFile.insertarPaciente(paciente);
             profesionalSaludDF.insertarProfesional(profesionalSalud);
+            centroSaludDF.insertarCentro(centroSalud);
         }
     }
 
