@@ -1,6 +1,6 @@
-# Comentarios entrega fecha 04/05/2022
+# Comentarios entrega fecha 22/05/2022
 
-Las funciones eliminar estan eliminando todo contenido dentro del CSV y la funcion modificar se implemento pero no se provo su funcionamiento.
+Las funciones eliminar estan eliminando todo contenido dentro del CSV, se crea la opcion buscar profesional Salud pero aun no se implmenta
 
 # Proyecto - INF 2241 Programacion orientada a objetos
 
