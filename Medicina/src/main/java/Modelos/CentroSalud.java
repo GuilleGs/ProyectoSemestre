@@ -72,4 +72,15 @@ public class CentroSalud {
     public void setSistema(String sistema) {
         this.sistema = sistema;
     }
+
+//Metodos
+    public String toString(){
+        return "Datos Centro:  \n"+
+                "  -> Nombre        : " + nombre + "\n" +
+                "  -> Direccion     : " + direccion + "\n" +
+                "  -> Comuna        : " + comuna + "\n" +
+                "  -> Region        : " + region + "\n" +
+                "  -> Telefono      : " + telefono + "\n" +
+                "  -> Sistema       : " + sistema + "\n";
+    }
 }

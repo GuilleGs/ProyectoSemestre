@@ -20,7 +20,7 @@ public class CSMenu {
     //Metodo que crea un objeto centroSalud
     public CentroSalud centroCreado(){
         Scanner Entrada=new Scanner(System.in);
-        String nombre,direccion,comuna,region,sistema;
+        String nombre,direccion,comuna,region,sistema=null;
         int telefono;
         System.out.println("Nombre:");
         nombre=Entrada.nextLine();
@@ -30,8 +30,14 @@ public class CSMenu {
         comuna=Entrada.nextLine();
         System.out.println("Region");
         region=Entrada.nextLine();
-        System.out.println("Sistema");
-        sistema= Entrada.nextLine();
+        System.out.println("A que sistema de salud pertenece:");
+        System.out.println(" 1.- Sistema publico");
+        System.out.println(" 2.- Sistema privado");
+        int opt = Integer.parseInt(Entrada.nextLine());
+        if (opt==1)
+            sistema="Publico";
+        if (opt==2)
+            sistema="Privado";
         System.out.println("Telefono");
         telefono=Integer.parseInt(Entrada.nextLine());
         return new CentroSalud(nombre,direccion,comuna,region,sistema,telefono);
@@ -57,8 +63,7 @@ public class CSMenu {
         direccion= Entrada.nextLine();
         centroSalud = buscarCentro(direccion);
         if (centroSalud != null){
-            System.out.println("Nombre: "+centroSalud.getNombre());
-            System.out.println("Direccion: "+centroSalud.getDireccion());
+            System.out.println(centroSalud.toString());
 
         }
         else{

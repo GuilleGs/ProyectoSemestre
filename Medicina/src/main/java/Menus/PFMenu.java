@@ -62,7 +62,7 @@ public class PFMenu {
         rut= Entrada.nextLine();
         profesionalSalud = buscarProfesional(rut);
         if (profesionalSalud != null){
-            System.out.println("Nombre: "+profesionalSalud.NombreCompleto());
+            System.out.println(profesionalSalud.toString());
             System.out.println("");
         }
         else{

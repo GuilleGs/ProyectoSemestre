@@ -67,7 +67,7 @@ public abstract class Persona {
     public String toString(){
         return "Datos persona: \n"+
                 "  -> RUT              : " + rut +"\n" +
-                "  -> Nombres          : " + nombre + "\n" +
+                "  -> Nombre           : " + nombre + "\n" +
                 "  -> Apellido paterno : " + apPaterno + "\n" +
                 "  -> Apellido materno : " + apMaterno + "\n";
     }
@@ -75,7 +75,7 @@ public abstract class Persona {
     public String toString(String titulo) {
         return "Datos " + titulo + ": \n" +
                 "    -> RUT              : " + rut + "\n" +
-                "    -> Nombres          : " + nombre + "\n" +
+                "    -> Nombre           : " + nombre + "\n" +
                 "    -> Apellido paterno : " + apPaterno + "\n" +
                 "    -> Apellido materno : " + apMaterno + "\n";
     }
