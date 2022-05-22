@@ -15,6 +15,10 @@ public class Caso {
         this.descripcion = descripcion;
     }
 
+    public Caso(){
+
+    }
+
     public IDCaso getId() {
         return id;
     }

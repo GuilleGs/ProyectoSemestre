@@ -6,6 +6,7 @@ package Modelos;
  */
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Paciente extends Persona {
 
@@ -18,10 +19,10 @@ public class Paciente extends Persona {
         this.prevision = prevision;
     }
 
-    public Paciente(){
+    public Paciente() {
         super();
-
     }
+
 
     //Getters
 
@@ -34,6 +35,14 @@ public class Paciente extends Persona {
         return prevision;
     }
 
+    public Caso getCaso(String rut){
+        for (Map.Entry<IDCaso,Caso> caso: this.casos.entrySet()){
+            if (caso.getKey().rutPaciente.compareTo(rut)==0){
+                return caso.getValue();
+            }
+        }
+        return null;
+    }
     //Setters
 
     public void setEmail(String email) {
@@ -44,7 +53,23 @@ public class Paciente extends Persona {
         this.prevision = prevision;
     }
 
+    public void setCaso (HashMap<IDCaso,Caso> caso){
+        this.casos = caso;
+    }
+
     //Metodo
 
+    @Override
+    public String toString(){
+        return super.toString("Paciente") +
+                "    -> Email     : " + email + "\n" +
+                "    -> Prevision : " + prevision + "\n";
+    }
 
+    @Override
+    public String toString(String titulo){
+        return super.toString(titulo)+
+                " -> Email     : " + email + "\n" +
+                " -> Prevision : " + prevision + "\n";
+    }
 }

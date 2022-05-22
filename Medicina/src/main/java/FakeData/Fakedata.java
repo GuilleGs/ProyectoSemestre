@@ -54,14 +54,15 @@ public class Fakedata {
         return new ProfesionalSalud(rut,nombre,apPat,apMat,edad,profesion,universidad,anioEgreso);
     }
     public CentroSalud generateCentro(){
-        String nombre,direccion,comuna,region;
+        String nombre,direccion,comuna,region,sistema;
         int telefono;
         nombre = this.faker.name().firstName();
         direccion = this.faker.name().lastName();
         comuna = this.faker.name().lastName();
         telefono= this.faker.number().numberBetween(10000000,89999999);
         region = this.faker.name().username();
-        return new CentroSalud(nombre,direccion,comuna,region,telefono);
+        sistema = this.faker.name().username();
+        return new CentroSalud(nombre,direccion,comuna,region,sistema,telefono);
     }
 
     public void generateFakeData(){

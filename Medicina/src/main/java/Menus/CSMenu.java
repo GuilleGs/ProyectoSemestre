@@ -20,7 +20,7 @@ public class CSMenu {
     //Metodo que crea un objeto centroSalud
     public CentroSalud centroCreado(){
         Scanner Entrada=new Scanner(System.in);
-        String nombre,direccion,comuna,region;
+        String nombre,direccion,comuna,region,sistema;
         int telefono;
         System.out.println("Nombre:");
         nombre=Entrada.nextLine();
@@ -30,9 +30,11 @@ public class CSMenu {
         comuna=Entrada.nextLine();
         System.out.println("Region");
         region=Entrada.nextLine();
+        System.out.println("Sistema");
+        sistema= Entrada.nextLine();
         System.out.println("Telefono");
         telefono=Integer.parseInt(Entrada.nextLine());
-        return new CentroSalud(nombre,direccion,comuna,region,telefono);
+        return new CentroSalud(nombre,direccion,comuna,region,sistema,telefono);
     }
 
     //Metodo que agrega un objeto centroSalud
@@ -89,4 +91,24 @@ public class CSMenu {
         return true;
     }
 
+
+    public void cantidadSistema(){
+        String sistema;
+        int cantidad;
+        Scanner Entrada=new Scanner(System.in);
+        System.out.println("Ingrese el sistema");
+        sistema= Entrada.nextLine();
+        cantidad=centroSaludDF.getCentroSistema(sistema);
+        System.out.println(cantidad);
+    }
+
+    public void cantidadRegion(){
+        String region;
+        int cantidad;
+        Scanner Entrada=new Scanner(System.in);
+        System.out.println("Ingrese la Region");
+        region= Entrada.nextLine();
+        cantidad=centroSaludDF.getCentroRegion(region);
+        System.out.println(cantidad);
+    }
 }

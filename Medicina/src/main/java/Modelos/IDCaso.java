@@ -10,4 +10,11 @@ public class IDCaso {
         this.rutPaciente = rutPaciente;
     }
 
+    public String getRutPaciente(String rut) {
+        return rutPaciente;
+    }
+
+    public void setRutPaciente(String rutPaciente) {
+        this.rutPaciente = rutPaciente;
+    }
 }

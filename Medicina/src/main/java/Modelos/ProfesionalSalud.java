@@ -23,6 +23,7 @@ public class ProfesionalSalud extends Persona {
 
     }
 
+
     //Getters
 
 
@@ -60,5 +61,21 @@ public class ProfesionalSalud extends Persona {
         this.centrosAtencion = centrosAtencion;
     }
 
+    //Metodos
 
+    @Override
+    public String toString(){
+        return super.toString("Profesional Salud")+
+                " -> Profesion   : " + profesion + "\n" +
+                " -> Universidad : " + universidad + "\n" +
+                " -> Anio Egreso : " + anioEgreso + "\n";
+    }
+
+    @Override
+    public String toString(String titulo){
+        return super.toString(titulo)+
+                " -> Profesion   : " + profesion + "\n" +
+                " -> Universidad : " + universidad + "\n" +
+                " -> Anio Egreso : " + anioEgreso + "\n";
+    }
 }

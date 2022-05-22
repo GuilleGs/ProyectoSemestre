@@ -23,24 +23,44 @@ public class CentroSaludDF implements CentroData {
         datalist.add(centroSalud.getDireccion());
         datalist.add(centroSalud.getComuna());
         datalist.add(centroSalud.getRegion());
+        datalist.add(centroSalud.getSistema());
         datalist.add(Integer.toString(centroSalud.getTelefono()));
         return DataFile.listToCSV(datalist);
     }
 
     public CentroSalud centrofromCSV(String csv){
         String[] parts=csv.split(",");
-        return new CentroSalud(parts[0],parts[1],parts[2],parts[3],Integer.parseInt(parts[4]));
+        return new CentroSalud(parts[0],parts[1],parts[2],parts[3],parts[4],Integer.parseInt(parts[5]));
     }
 
     public CentroSalud getCentro(String direccion){
         List<String> data = this.dataFile.getData();
         for (String csv : data){
-            if (csv.split(",")[0].equals(direccion))
+            if (csv.split(",")[1].equals(direccion))
                 return centrofromCSV(csv);
         }
         return null;
     }
 
+    public int getCentroRegion(String region){
+        List<String> data = this.dataFile.getData();
+        int contador=0;
+        for (String csv : data){
+            if (csv.split(",")[3].equals(region))
+                contador+=1;
+        }
+        return contador;
+    }
+
+    public int getCentroSistema(String sistema){
+        List<String> data = this.dataFile.getData();
+        int contador=0;
+        for (String csv : data){
+            if (csv.split(",")[4].equals(sistema))
+                contador+=1;
+        }
+        return contador;
+    }
     public boolean insertarCentro(CentroSalud centroSalud){
         return this.dataFile.insertLine(centrotoCSV(centroSalud));
     }

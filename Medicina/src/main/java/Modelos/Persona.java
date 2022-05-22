@@ -3,7 +3,7 @@ package Modelos;
  *
  * @author Guillermo González y Brayan Ocares
  */
-public class Persona {
+public abstract class Persona {
 
     private String rut,nombre,apPaterno,apMaterno;
     private int edad;
@@ -43,10 +43,6 @@ public class Persona {
 
     //Setters
 
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -66,4 +62,22 @@ public class Persona {
     public String NombreCompleto(){
         return this.nombre+" "+this.apPaterno+" "+this.apMaterno;
     }
+    
+    @Override
+    public String toString(){
+        return "Datos persona: \n"+
+                "  -> RUT              : " + rut +"\n" +
+                "  -> Nombres          : " + nombre + "\n" +
+                "  -> Apellido paterno : " + apPaterno + "\n" +
+                "  -> Apellido materno : " + apMaterno + "\n";
+    }
+
+    public String toString(String titulo) {
+        return "Datos " + titulo + ": \n" +
+                "    -> RUT              : " + rut + "\n" +
+                "    -> Nombres          : " + nombre + "\n" +
+                "    -> Apellido paterno : " + apPaterno + "\n" +
+                "    -> Apellido materno : " + apMaterno + "\n";
+    }
+    
 }

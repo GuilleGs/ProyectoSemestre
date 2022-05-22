@@ -13,6 +13,7 @@ public class MenuConsola {
         PMenu menuPaciente=new PMenu();
         PFMenu menuProfesional=new PFMenu();
         CSMenu menuCentro=new CSMenu();
+        CasoMenu casoMenu=new CasoMenu();
         int opt;
         Scanner entrada=new Scanner(System.in);
         do {
@@ -21,6 +22,7 @@ public class MenuConsola {
             System.out.println(" (1) -> Ingresar Paciente");
             System.out.println(" (2) -> Ingrese Centro de salud");
             System.out.println(" (3) -> Ingrese Profesional de la salud");
+            System.out.println(" (4) -> Ingrese Caso");
             System.out.println(" (0) -> Salir");
             opt = Integer.parseInt(entrada.nextLine());
             if (opt == 1){
@@ -32,7 +34,10 @@ public class MenuConsola {
             if (opt==3){
                 menuProfesional.generarProfesional();
             }
-            if (opt >3 || opt <0)
+            if (opt==4){
+                casoMenu.generarCaso();
+            }
+            if (opt >4 || opt <0)
                 System.out.println("Ingrese una opcion valida");
         } while (opt != 0);
 
@@ -41,6 +46,7 @@ public class MenuConsola {
         PMenu menu= new PMenu();
         PFMenu menuProfesional=new PFMenu();
         CSMenu menuCentro=new CSMenu();
+        CasoMenu casoMenu=new CasoMenu();
         int opt;
         Scanner entrada=new Scanner(System.in);
         do {
@@ -49,6 +55,7 @@ public class MenuConsola {
             System.out.println(" (1) -> Imprimir Paciente");
             System.out.println(" (2) -> Imprimir Centro de salud");
             System.out.println(" (3) -> Imprimir Profesional de la salud");
+            System.out.println(" (4) -> Imprimir Caso");
             System.out.println(" (0) -> Salir");
             opt = Integer.parseInt(entrada.nextLine());
             if (opt == 1){
@@ -59,6 +66,9 @@ public class MenuConsola {
             }
             if (opt==3){
                 menuProfesional.imprimirProfesional();
+            }
+            if (opt==4){
+                casoMenu.imprimirCaso();
             }
             if (opt >3 || opt <0)
                 System.out.println("Ingrese una opcion valida");
@@ -122,6 +132,34 @@ public class MenuConsola {
         } while (opt != 0);
 
     }
+    public static void buscarDatos() {
+        PMenu menu= new PMenu();
+        PFMenu menuProfesional=new PFMenu();
+        CSMenu menuCentro=new CSMenu();
+        int opt;
+        Scanner entrada=new Scanner(System.in);
+        do {
+            System.out.println();
+            System.out.println("    ----------- Menu -----------");
+            System.out.println(" (1) -> Cantidad Centros de Salud por Sistema");
+            System.out.println(" (2) -> Cantidad Centros de Salud por Region");
+            System.out.println(" (3) -> Cantidad Profesionales de Salud por Profesion");
+            System.out.println(" (0) -> Salir");
+            opt = Integer.parseInt(entrada.nextLine());
+            if (opt == 1){
+                menuCentro.cantidadSistema();
+            }
+            if (opt ==2){
+                menuCentro.cantidadRegion();
+            }
+            if (opt==3){
+                //menuProfesional.eliminarProfesional();
+            }
+            if (opt >3 || opt <0)
+                System.out.println("Ingrese una opcion valida");
+        } while (opt != 0);
+
+    }
     public static void main(String[] args){
         PMenu menu;
         int opt;
@@ -132,7 +170,8 @@ public class MenuConsola {
             System.out.println(" (1) -> Ingresar Datos");
             System.out.println(" (2) -> Imprimir Datos");
             System.out.println(" (3) -> Eliminar Datos");
-            System.out.println(" (2) -> Modificar Datos");
+            System.out.println(" (4) -> Modificar Datos");
+            System.out.println(" (5) -> Buscar Datos");
             System.out.println(" (0) -> Salir");
             opt = Integer.parseInt(entrada.nextLine());
             if (opt == 1){
@@ -147,7 +186,10 @@ public class MenuConsola {
             if (opt ==4){
                 modificarDatos();
             }
-            if (opt >4 || opt <0)
+            if (opt==5){
+                buscarDatos();
+            }
+            if (opt >5 || opt <0)
                 System.out.println("Ingrese una opcion valida");
         } while (opt != 0);
 

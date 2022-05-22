@@ -1,3 +1,7 @@
+# Comentarios entrega fecha 04/05/2022
+
+Las funciones eliminar estan eliminando todo contenido dentro del CSV y la funcion modificar se implemento pero no se provo su funcionamiento.
+
 # Proyecto - INF 2241 Programacion orientada a objetos
 
 ****Escuela de Ingeniería Informática | PUCV Chile****

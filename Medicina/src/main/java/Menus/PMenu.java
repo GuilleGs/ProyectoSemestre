@@ -63,7 +63,7 @@ public class PMenu {
         rut= Entrada.nextLine();
         paciente = buscarpaciente(rut);
         if (paciente != null){
-            System.out.println("Nombre: "+paciente.NombreCompleto());
+            System.out.println(paciente.toString());
             System.out.println("");
         }
         else{
