@@ -3,10 +3,8 @@ package Data;
 import Modelos.ProfesionalSalud;
 
 public interface ProfesionalData {
-
-    public boolean insertarProfesional(ProfesionalSalud profesionalSalud);
-
-    public boolean updateProfesional(ProfesionalSalud profesionalSalud);
-
-    public boolean deleteProfesional(ProfesionalSalud profesionalSalud);
+    ProfesionalSalud getProfesional(String rut);
+    boolean insertarProfesional(ProfesionalSalud profesionalSalud);
+    boolean updateProfesional(ProfesionalSalud profesionalSalud);
+    boolean deleteProfesional(ProfesionalSalud profesionalSalud);
 }

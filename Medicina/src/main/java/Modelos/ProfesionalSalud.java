@@ -1,16 +1,9 @@
 package Modelos;
-/**
- *
- * @author Guillermo González y Brayan Ocares
- */
 
-import java.util.ArrayList;
+public class ProfesionalSalud extends Persona{
 
-public class ProfesionalSalud extends Persona {
-
-    private String profesion,universidad;
+    private String profesion, universidad;
     private int anioEgreso;
-    private ArrayList<CentroSalud> centrosAtencion;
 
     public ProfesionalSalud(String rut, String nombre, String apPaterno, String apMaterno, int edad, String profesion, String universidad, int anioEgreso) {
         super(rut, nombre, apPaterno, apMaterno, edad);
@@ -19,13 +12,14 @@ public class ProfesionalSalud extends Persona {
         this.anioEgreso = anioEgreso;
     }
 
-    public ProfesionalSalud() {
+    public ProfesionalSalud(String profesion, String universidad, int anioEgreso) {
+        this.profesion = profesion;
+        this.universidad = universidad;
+        this.anioEgreso = anioEgreso;
+    }
+    public ProfesionalSalud(){
 
     }
-
-
-    //Getters
-
 
     public String getProfesion() {
         return profesion;
@@ -39,12 +33,6 @@ public class ProfesionalSalud extends Persona {
         return anioEgreso;
     }
 
-    public ArrayList<CentroSalud> getCentrosAtencion() {
-        return centrosAtencion;
-    }
-
-    //Setters
-
     public void setProfesion(String profesion) {
         this.profesion = profesion;
     }
@@ -57,25 +45,19 @@ public class ProfesionalSalud extends Persona {
         this.anioEgreso = anioEgreso;
     }
 
-    public void setCentrosAtencion(ArrayList<CentroSalud> centrosAtencion) {
-        this.centrosAtencion = centrosAtencion;
-    }
-
-    //Metodos
-
-    @Override
     public String toString(){
         return super.toString("Profesional Salud")+
-                " -> Profesion   : " + profesion + "\n" +
-                " -> Universidad : " + universidad + "\n" +
-                " -> Anio Egreso : " + anioEgreso + "\n";
+                " -> Profesion        : "+profesion+"\n"+
+                " -> Universidad      : "+universidad+"\n"+
+                " -> Anio Egreso      : "+anioEgreso+"\n";
     }
 
     @Override
     public String toString(String titulo){
         return super.toString(titulo)+
-                " -> Profesion   : " + profesion + "\n" +
-                " -> Universidad : " + universidad + "\n" +
-                " -> Anio Egreso : " + anioEgreso + "\n";
+                " -> Profesion        : "+profesion+"\n"+
+                " -> Universidad      : "+universidad+"\n"+
+                " -> Anio Egreso      : "+anioEgreso+"\n";
     }
+
 }

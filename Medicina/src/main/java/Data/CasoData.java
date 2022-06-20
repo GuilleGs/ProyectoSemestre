@@ -1,18 +1,19 @@
 package Data;
 
 import Modelos.Caso;
-import Modelos.IDCaso;
+import Modelos.IDcaso;
 
 import java.util.HashMap;
 
-public interface CasoData  {
-    public HashMap<IDCaso, Caso> getCaso();
+public interface CasoData {
 
-    public HashMap<IDCaso,Caso> getCaso(String rutPaciente);
+    Caso get(IDcaso id);
+    Caso getCaso(String rut, int iterador);
+    HashMap<IDcaso, Caso> getCaso();
+    HashMap<IDcaso,Caso> getCaso(String rutPaciente);
+    Caso getCaso(IDcaso iDcaso);
+    void insertarCaso(Caso caso);
+    void actualizarCaso(Caso caso);
+    void eliminarCaso(Caso caso);
 
-    public void insertarCaso(Caso caso);
-
-    public void actualizarCaso(Caso caso);
-
-    public void eliminarCaso(Caso caso);
 }

@@ -1,10 +1,6 @@
 package Modelos;
-/**
- *
- * @author Guillermo González y Brayan Ocares
- */
-public abstract class Persona {
 
+public abstract class Persona {
     private String rut,nombre,apPaterno,apMaterno;
     private int edad;
 
@@ -20,7 +16,6 @@ public abstract class Persona {
 
     }
 
-    //Getters
     public String getRut() {
         return rut;
     }
@@ -41,7 +36,9 @@ public abstract class Persona {
         return edad;
     }
 
-    //Setters
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -59,25 +56,20 @@ public abstract class Persona {
         this.edad = edad;
     }
 
-    public String NombreCompleto(){
-        return this.nombre+" "+this.apPaterno+" "+this.apMaterno;
-    }
-    
-    @Override
     public String toString(){
-        return "Datos persona: \n"+
-                "  -> RUT              : " + rut +"\n" +
-                "  -> Nombre           : " + nombre + "\n" +
-                "  -> Apellido paterno : " + apPaterno + "\n" +
-                "  -> Apellido materno : " + apMaterno + "\n";
+        return "Datos person: \n"+
+                " ->Rut              : "+rut+"\n"+
+                " ->Nombre           : "+nombre+"\n"+
+                " ->Apellido paterno : "+apPaterno+"\n"+
+                " ->Apellido materno : "+apMaterno+"\n";
     }
 
-    public String toString(String titulo) {
-        return "Datos " + titulo + ": \n" +
-                "    -> RUT              : " + rut + "\n" +
-                "    -> Nombre           : " + nombre + "\n" +
-                "    -> Apellido paterno : " + apPaterno + "\n" +
-                "    -> Apellido materno : " + apMaterno + "\n";
+    public String toString(String titulo){
+        return "Datos "+titulo+": \n"+
+                " -> Rut              : "+rut+"\n"+
+                " -> Nombre           : "+nombre+"\n"+
+                " -> Apellido paterno : "+apPaterno+"\n"+
+                " -> Apellido materno : "+apMaterno+"\n";
     }
-    
+
 }

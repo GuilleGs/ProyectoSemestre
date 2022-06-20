@@ -1,25 +1,21 @@
 package Modelos;
 
-/**
- *
- * @author Guillermo González y Brayan Ocares
- */
+import java.util.Map;
 
 public class Caso {
-    private IDCaso id;
+
+    private IDcaso id;
     private String descripcion;
 
-
-    public Caso(IDCaso id, String descripcion) {
+    public Caso(IDcaso id, String descripcion) {
         this.id = id;
         this.descripcion = descripcion;
     }
-
     public Caso(){
-
+        this.id=id;
+        this.descripcion=descripcion;
     }
-
-    public IDCaso getId() {
+    public IDcaso getId() {
         return id;
     }
 
@@ -27,7 +23,7 @@ public class Caso {
         return descripcion;
     }
 
-    public void setId(IDCaso id) {
+    public void setId(IDcaso id) {
         this.id = id;
     }
 
@@ -35,4 +31,5 @@ public class Caso {
         this.descripcion = descripcion;
     }
 
+    
 }
