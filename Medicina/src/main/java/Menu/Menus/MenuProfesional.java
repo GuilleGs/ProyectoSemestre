@@ -1,4 +1,6 @@
-package Menus;
+package Menu.Menus;
+
+import Menu.Controladores.ProfesionalControlador;
 
 import java.util.Scanner;
 

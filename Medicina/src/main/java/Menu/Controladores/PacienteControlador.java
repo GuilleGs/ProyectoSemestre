@@ -1,4 +1,4 @@
-package Menus;
+package Menu.Controladores;
 
 import Data.file.PacienteDF;
 import Modelos.Paciente;

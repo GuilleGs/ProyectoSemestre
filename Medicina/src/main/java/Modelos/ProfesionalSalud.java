@@ -1,15 +1,19 @@
 package Modelos;
 
+import java.util.LinkedList;
+
 public class ProfesionalSalud extends Persona{
 
     private String profesion, universidad;
     private int anioEgreso;
+    private LinkedList <CentroSalud> centroSaluds;
 
     public ProfesionalSalud(String rut, String nombre, String apPaterno, String apMaterno, int edad, String profesion, String universidad, int anioEgreso) {
         super(rut, nombre, apPaterno, apMaterno, edad);
         this.profesion = profesion;
         this.universidad = universidad;
         this.anioEgreso = anioEgreso;
+        this.centroSaluds=new LinkedList<CentroSalud>();
     }
 
     public ProfesionalSalud(String profesion, String universidad, int anioEgreso) {
@@ -17,6 +21,7 @@ public class ProfesionalSalud extends Persona{
         this.universidad = universidad;
         this.anioEgreso = anioEgreso;
     }
+
     public ProfesionalSalud(){
 
     }

@@ -1,4 +1,6 @@
-package Menus;
+package Menu.Menus;
+
+import Menu.Controladores.PacienteControlador;
 
 import java.util.Scanner;
 

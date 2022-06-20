@@ -1,4 +1,9 @@
-package Menus;
+package Menu;
+
+import Menu.Menus.MenuCaso;
+import Menu.Menus.MenuCentro;
+import Menu.Menus.MenuPaciente;
+import Menu.Menus.MenuProfesional;
 
 import java.util.Scanner;
 
@@ -7,6 +12,7 @@ public class Principal {
         MenuPaciente menuPaciente=new MenuPaciente();
         MenuCaso menuCaso=new MenuCaso();
         MenuProfesional menuProfesional=new MenuProfesional();
+        MenuCentro menuCentro=new MenuCentro();
         int opt;
         Scanner entrada=new Scanner(System.in);
         do {
@@ -27,8 +33,11 @@ public class Principal {
             if (opt == 3){
                 menuProfesional.ProfecionalMenu();
             }
+            if(opt==4){
+                menuCentro.CentroMenu();
+            }
 
-            if (opt >2 || opt <0)
+            if (opt > 1 || opt < 0)
                 System.out.println("Ingrese una opcion valida");
         } while (opt != 0);
     }

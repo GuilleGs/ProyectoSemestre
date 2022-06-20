@@ -1,11 +1,12 @@
 package Data.file;
 
 import Modelos.Paciente;
+import Data.PacienteData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PacienteDF {
+public class PacienteDF implements PacienteData {
     private final Data dataFile;
 
     public PacienteDF(){
