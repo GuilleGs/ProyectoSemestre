@@ -1,6 +1,8 @@
-# Comentarios entrega fecha 22/05/2022
+# Comentarios entrega fecha 20/06/2022
 
-Las funciones eliminar estan eliminando todo contenido dentro del CSV, se crea la opcion buscar profesional Salud pero aun no se implmenta
+Se crean los casos en csv, se crea una interfaz grafica para poder ver los datos en los archivos CSV de pacientes,profesionales de salud y casos.
+Para ejecutar correctamente las ventanas graficas se debe ejecutar el archivo Principal el cual tiene los diferentes menus.
+El menu de consola se mejora y agrupa en paquetes de menus y controladores, esta ultima es donde se encuentra los metodos para la creacion y muestra de datos por consola.
 
 # Proyecto - INF 2241 Programacion orientada a objetos
 
