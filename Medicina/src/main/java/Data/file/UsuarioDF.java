@@ -4,6 +4,7 @@
  */
 package Data.file;
 
+import Modelos.ProfesionalSalud;
 import Modelos.Usuario;
 import Data.UsuarioData;
 
@@ -25,12 +26,22 @@ public class UsuarioDF implements UsuarioData {
         List<String> datalist=new ArrayList<>();
         datalist.add((usuario.getRut()));
         datalist.add(usuario.getContraseña());
+        datalist.add(Integer.toString(usuario.getTipo()));
         return Data.listToCSV(datalist);
     }
 
     public Usuario usuariosfromCSV(String csv){
         String[] parts = csv.split(",");
-        return new Usuario(parts[0],parts[1]);
+        return new Usuario(parts[0],parts[1],Integer.parseInt(parts[2]));
+    }
+
+    public Usuario getUsuarios(String user) {
+        List<String> data = this.dataFile.getData();
+        for (String csv : data) {
+            if (csv.split(",")[0].equals(user))
+                return usuariosfromCSV(csv);
+        }
+        return null;
     }
 
     public boolean getUsuario(String user,String contraseña){
@@ -41,6 +52,7 @@ public class UsuarioDF implements UsuarioData {
         }
         return false;
     }
+
     public boolean insertarUsuario(Usuario usuario){
         return this.dataFile.insertLine(usuariotoCSV(usuario));
     }

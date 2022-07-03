@@ -10,10 +10,12 @@ package Modelos;
  */
 public class Usuario {
     private String rut,contraseña;
+    private int tipo;
 
-    public Usuario(String rut, String contraseña) {
+    public Usuario(String rut, String contraseña,int tipo) {
         this.rut = rut;
         this.contraseña = contraseña;
+        this.tipo=tipo;
     }
 
     public Usuario() {
@@ -35,6 +37,12 @@ public class Usuario {
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
-    
-    
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
 }
