@@ -1,8 +1,9 @@
-# Comentarios entrega fecha 20/06/2022
+# Comentarios entrega fecha 02/07/2022
 
-Se crean los casos en csv, se crea una interfaz grafica para poder ver los datos en los archivos CSV de pacientes,profesionales de salud y casos.
-Para ejecutar correctamente las ventanas graficas se debe ejecutar el archivo Principal el cual tiene los diferentes menus.
-El menu de consola se mejora y agrupa en paquetes de menus y controladores, esta ultima es donde se encuentra los metodos para la creacion y muestra de datos por consola.
+Se crea la el panel login con el que se busca poder ejecutar menus dependiendo del tipo de usuario que se cree.
+Se crea buscarPaciente en el GUI el cual muestra los datos de un paciente en concreto ingresando su rut.
+
+Se crea la clase usuario y se implementa la creacion de un usuario por consola.
 
 # Proyecto - INF 2241 Programacion orientada a objetos
 
