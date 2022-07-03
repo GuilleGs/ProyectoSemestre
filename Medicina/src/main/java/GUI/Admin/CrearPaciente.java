@@ -4,7 +4,7 @@
  */
 package GUI.Admin;
 
-import GUI.GuiProfesionales.BuscarPaciente;
+import GUI.Profesionales.BuscarPaciente;
 import Data.file.PacienteDF;
 import Modelos.Paciente;
 
@@ -204,7 +204,7 @@ public class CrearPaciente extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        BuscarPaciente newframe=new BuscarPaciente();
+        Login newframe=new Login();
         newframe.setVisible(true);
         
         this.dispose();

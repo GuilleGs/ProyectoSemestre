@@ -4,6 +4,7 @@
  */
 package GUI.Admin.Views;
 
+import GUI.Admin.Views.PacienteCSV;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;

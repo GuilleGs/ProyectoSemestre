@@ -2,14 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package GUI.GuiProfesionales;
+package GUI.Profesionales;
 
 import Data.file.PacienteDF;
-import GUI.Admin.CrearPaciente;
-import GUI.Admin.Views.Principal;
 import Modelos.Paciente;
 
-import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -18,8 +15,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class BuscarPaciente extends javax.swing.JFrame {
 
-    public PacienteDF pacienteDF=new PacienteDF();
-    public Paciente paciente=new Paciente();
+    private PacienteDF pacienteDF=new PacienteDF();
+    private Paciente paciente=new Paciente();
     /**
      * Creates new form NewJFrame
      */

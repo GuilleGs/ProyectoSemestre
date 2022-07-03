@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package GUI.GuiProfesionales;
+package GUI.Admin.Views;
 
 import GUI.Admin.Views.PacienteCSV;
-import GUI.Admin.Views.Principal;
+import GUI.Profesionales.MenuProfesionales;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -4,9 +4,10 @@
  */
 package GUI.Admin.Views;
 
+import GUI.Admin.Views.CasoCSV;
+import GUI.Admin.Views.CentrosCSV;
 import GUI.Admin.Views.PacienteCSV;
 import GUI.Admin.Views.ProfesionalCSV;
-import GUI.GuiProfesionales.CasoCSV;
 
 /**
  *
