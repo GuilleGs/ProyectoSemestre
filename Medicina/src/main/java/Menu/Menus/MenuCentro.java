@@ -2,13 +2,14 @@ package Menu.Menus;
 
 import Exceptions.LetraInvalida;
 import Exceptions.NumeroInvalido;
-import Menu.Controladores.CasoControlador;
+import Menu.Controladores.CentroControlador;
+import Menu.Controladores.UsuarioControlador;
 
 import java.util.Scanner;
 
 public class MenuCentro {
     public void CentroMenu() throws NumeroInvalido{
-        CasoControlador casoControlador=new CasoControlador();
+        CentroControlador centroControlador = new CentroControlador();
         int opt;
         Scanner entrada=new Scanner(System.in);
         try{
@@ -21,12 +22,15 @@ public class MenuCentro {
                 System.out.println(" (0) -> Salir");
                 opt = Integer.parseInt(entrada.nextLine());
                 if (opt == 1){
-                    casoControlador.generarCaso();
+                    centroControlador.generarCentro();
                 }
                 if (opt ==2){
-                   casoControlador.ImprimrCasos();
+                    centroControlador.imprimirCentro();
                 }
-                if (opt >4 || opt <0)
+                if (opt==3){
+                    centroControlador.eliminarCentro();
+                }
+                if (opt > 3|| opt < 0)
                     throw new NumeroInvalido();
             } while (opt != 0);
         }catch (NumberFormatException e){
