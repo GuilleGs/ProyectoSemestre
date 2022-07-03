@@ -118,7 +118,7 @@ public class CasoCSV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        MenuProfesionales newframe=new MenuProfesionales();
+        Principal newframe=new Principal();
         newframe.setVisible(true);
         
         this.dispose();

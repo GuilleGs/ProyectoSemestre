@@ -4,6 +4,8 @@
  */
 package GUI.Pacientes;
 
+import GUI.Admin.Views.CentrosCSV;
+
 /**
  *
  * @author ggonzalez
@@ -15,6 +17,7 @@ public class MenuPaciente extends javax.swing.JFrame {
      */
     public MenuPaciente() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -41,8 +44,18 @@ public class MenuPaciente extends javax.swing.JFrame {
         });
 
         jButton2.setText("Centros");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Salir");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,7 +97,24 @@ public class MenuPaciente extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        BuscarProfesional newframe=new BuscarProfesional();
+        newframe.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CentrosCSV newframe=new CentrosCSV();
+        newframe.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -17,6 +17,7 @@ public class MenuProfesionales extends javax.swing.JFrame {
      */
     public MenuProfesionales() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -43,8 +44,18 @@ public class MenuProfesionales extends javax.swing.JFrame {
         });
 
         jButton2.setText("Buscar Paciente");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Salir");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Monaco", 3, 14)); // NOI18N
         jLabel1.setText("Bienvenido Profesional de la salud, elija una opcion");
@@ -85,11 +96,24 @@ public class MenuProfesionales extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CasoCSV newframe=new CasoCSV();
+        CasoCSVProfesional newframe=new CasoCSVProfesional();
         newframe.setVisible(true);
         
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        BuscarPaciente newframe=new BuscarPaciente();
+        newframe.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

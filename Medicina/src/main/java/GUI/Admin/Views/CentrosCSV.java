@@ -24,6 +24,7 @@ public class CentrosCSV extends javax.swing.JFrame {
      */
     public CentrosCSV() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
